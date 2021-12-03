@@ -11,5 +11,6 @@ func main() {
 		fmt.Print("数据库初始化错误")
 		panic(err)
 	}
+
 	fmt.Println("数据库链接成功")
 }
