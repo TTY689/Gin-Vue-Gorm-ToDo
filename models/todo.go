@@ -34,6 +34,6 @@ func UpdateAToDo(todo *ToDo) (err error) {
 }
 
 func DeleteAToDo(id string) (err error) {
-	err = dao.DB.Where("id=?", id).Delete(ToDo{}).Error
+	err = dao.DB.Where("id=?", id).Delete(&ToDo{}).Error
 	return
 }

@@ -42,9 +42,11 @@ func GetToDoList(c *gin.Context) {
 
 func UpdateAToDo(c *gin.Context) {
 	id, ok := c.Params.Get("id")
+	//fmt.Println(c.Request.Body)
 	if !ok {
 		c.JSON(http.StatusOK, gin.H{
-			"error": "无效ID",
+			"error":   "无效ID",
+			"message": id,
 		})
 		return
 	}

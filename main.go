@@ -13,7 +13,7 @@ func main() {
 		fmt.Print("数据库初始化错误")
 		panic(err)
 	}
-	//fmt.Println("数据库链接成功")
+	fmt.Println("数据库链接成功")
 	err = dao.DB.AutoMigrate(&models.ToDo{})
 	if err != nil {
 		fmt.Print("数据库迁移失败")
