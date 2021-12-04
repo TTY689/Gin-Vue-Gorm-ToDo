@@ -19,8 +19,8 @@ func SetupRouter() *gin.Engine {
 	{
 		v1Group.POST("/todo", controller.CreateToDo)
 		v1Group.GET("/todo", controller.GetToDoList)
-		v1Group.PUT("/todo", controller.UpdateAToDo)
-		v1Group.DELETE("/todo", controller.DeleteToDo)
+		v1Group.PUT("/todo:id", controller.UpdateAToDo)
+		v1Group.DELETE("/todo:id", controller.DeleteToDo)
 	}
 	return r
 

@@ -13,8 +13,10 @@ func IndexHandler(c *gin.Context) {
 
 func CreateToDo(c *gin.Context) {
 	var todo models.ToDo
-	err := c.Bind(&todo)
+	//fmt.Printf("%v",c.Request.Body.Get("id"))
+	err := c.ShouldBindJSON(&todo)
 	if err != nil {
+		fmt.Println(todo)
 		fmt.Println("表单信息读取错误")
 		return
 	}
@@ -80,6 +82,8 @@ func DeleteToDo(c *gin.Context) {
 			"error": err.Error(),
 		})
 	} else {
-		c.JSON(http.StatusOK, gin.H{})
+		c.JSON(http.StatusOK, gin.H{
+			"message": "delete successfully",
+		})
 	}
 }
