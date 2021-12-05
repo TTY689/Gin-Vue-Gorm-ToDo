@@ -1,9 +1,14 @@
-# Gin-Vue-Gorm-ToDo
-a little Web app to achieve a ToDo-List
+##### Gin+GORM
 
-### 进度
+ 	后端部分测试完毕
 
-完善视图层函数 2021/12/3
+​	接口工作正常
 
-### TODO
-学习Vue的实现 （待定
+​
+
+​	前端部分导入了vue生成的静态文件
+
+​	对VUE框架的学习暂时作罢
+
+
+
