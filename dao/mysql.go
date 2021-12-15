@@ -15,7 +15,7 @@ var (
 
 func InitMySQL() (err error) {
 
-	cfg, err := ini.Load("../config/config.ini")
+	cfg, err := ini.Load("config/config.ini")
 	if err != nil {
 		fmt.Println("配置文件出错")
 		return err
