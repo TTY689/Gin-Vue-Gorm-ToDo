@@ -27,7 +27,6 @@ func InitMySQL() (err error) {
 	database := cfg.Section("mysql").Key("database").String()
 	var dsn string
 	dsn = username + ":" + password + "@tcp(" + ip + ")/" + database + "?charset=utf8mb4&parseTime=True&loc=Local"
-	//dsn := "czy:528429@tcp(8.136.224.253)/Go?charset=utf8mb4&parseTime=True&loc=Local"
 
 	DB, err = gorm.Open(mysql.New(mysql.Config{
 		DSN: dsn}), &gorm.Config{})
